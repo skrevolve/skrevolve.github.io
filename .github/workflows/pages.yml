@@ -1,0 +1,19 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:    # 수동 실행 옵션
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./vimwiki/src/html   # 배포할 디렉토리 경로
+          branch: gh-pages             # 배포할 브랜치
+          clean: true                  # 이전 파일 정리
