@@ -20,7 +20,7 @@ let mapleader = ","
 
 let g:vimwiki_list = [
     \{
-    \   'path': '~/skrevolve.github.io/wiki/src/md',
+    \   'path': '~/skrevolve.github.io/vimwiki/src/md',
     \   'syntax': 'markdown',
     \   'ext' : '.md',
     \   'diary_rel_path': '.',
@@ -32,9 +32,9 @@ let g:vimwiki_conceallevel = 0
 function! SaveAndConvertToHTML()
     write
     let current_file = expand('%:p')
-    let relative_path = substitute(current_file, $HOME.'/skrevolve.github.io/wiki/src/md/', '', '')
-    let html_file = $HOME.'/skrevolve.github.io/wiki/src/html/'.substitute(relative_path, '\.md$', '.html', '')
-    let template_file = $HOME.'/skrevolve.github.io/wiki/src/html/template.html'
+    let relative_path = substitute(current_file, $HOME.'/skrevolve.github.io/vimwiki/src/md/', '', '')
+    let html_file = $HOME.'/skrevolve.github.io/vimwiki/src/html/'.substitute(relative_path, '\.md$', '.html', '')
+    let template_file = $HOME.'/skrevolve.github.io/vimwiki/src/html/template.html'
     
     silent !mkdir -p "$(dirname '".html_file."')"
     

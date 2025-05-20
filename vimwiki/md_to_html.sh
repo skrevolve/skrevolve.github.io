@@ -1,13 +1,13 @@
 #!/bin/bash
 
-SOURCE_DIR="$HOME/skrevolve.github.io/wiki/src/md"
-OUTPUT_DIR="$HOME/skrevolve.github.io/wiki/src/html"
-TEMPLATE_FILE="$HOME/skrevolve.github.io/wiki/src/html/template.html"
-INDEX_FILE="$HOME/skrevolve.github.io/wiki/src/md/index.md"
+SOURCE_DIR="$HOME/skrevolve.github.io/vimwiki/src/md"
+OUTPUT_DIR="$HOME/skrevolve.github.io/vimwiki/src/html"
+TEMPLATE_FILE="$HOME/skrevolve.github.io/vimwiki/src/html/template.html"
+INDEX_FILE="$HOME/skrevolve.github.io/vimwiki/src/md/index.md"
 
 # pandoc check
 if ! command -v pandoc &> /dev/null; then
-    echo "pandoc이 설치되어 있지 않습니다."
+    echo "pandoc is not installed"
     exit 1
 fi
 
