@@ -16,16 +16,16 @@ fi
 
 git rm -rf .
 
-git checkout $current_branch -- vimwiki/src/md
+git checkout $current_branch -- vimwiki/src/thml
 
-git mv vimwiki/src/md/* .
+git mv vimwiki/src/html/* .
 
 git rm -rf vimwiki
 
 touch .nojekyll
 
 git add .
-git commit -m "GitHub Pages 자동 배포 $(date)"
+git commit -m "GitHub Pages deploy $(date)"
 git push -f origin gh-pages
 
 git checkout $current_branch
