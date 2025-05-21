@@ -31,18 +31,18 @@ sidebar_sections:
 # VimWiki
 
 ## 📝 Current Projects
-* [[project-a]](../html/project-a.html)
-* [[project-b]](../html/project-b.html)
-* [[project-c]](../html/projcet-c.html)
-* [[Database]](../html/Database.html)
+* [[project-a]](./project-a.html)
+* [[project-b]](./project-b.html)
+* [[project-c]](./projcet-c.html)
+* [[Database]](./Database.html)
 
 ## 📚 Study Notes
-* [[javascript]](../html/javascript.html)
-* [[python]](../html/python.html)
-* [[pm2]](../html/pm2.html)
+* [[javascript]](./javascript.html)
+* [[python]](./python.html)
+* [[pm2]](./pm2.html)
 
 ## 💡 Ideas
-* [[ideas]](../html/ideas.html)
+* [[ideas]](./ideas.html)
 
 ## ⚙️ Settings
-* [[vim-settings]](../html/vim-settings.html)
+* [[vim-settings]](./vim-settings.html)
