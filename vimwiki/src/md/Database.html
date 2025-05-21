@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        /* GitHub Dark Theme 스타일 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 auto;
+            padding: 32px;
+            color: #c9d1d9;
+            background-color: #0d1117;
+            /* 메인 콘텐츠 여백 조정 */
+            margin-left: 240px;  /* 사이드바 너비 + 여백 */
+            max-width: 1012px;
+        }
+     
+        /* 제목 스타일 */
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #e6edf3;
+        }
+     
+        h1 {
+            padding-bottom: .3em;
+            font-size: 2em;
+            border-bottom: 1px solid #21262d;
+        }
+     
+        h2 {
+            padding-bottom: .3em;
+            font-size: 1.5em;
+            border-bottom: 1px solid #21262d;
+        }
+     
+        /* 리스트 스타일 */
+        ul, ol {
+            padding-left: 2em;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+     
+        li {
+            margin: 0.25em 0;
+        }
+     
+        /* 코드 스타일 */
+        code {
+            padding: .2em .4em;
+            margin: 0;
+            font-size: 85%;
+            background-color: rgba(240,246,252,0.15);
+            border-radius: 3px;
+            font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+            color: #e6edf3;
+        }
+     
+        pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #161b22;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+        }
+     
+        pre code {
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+        }
+     
+        /* 링크 스타일 */
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+     
+        a:hover {
+            text-decoration: underline;
+        }
+     
+        /* 테이블 스타일 */
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-top: 0;
+            margin-bottom: 16px;
+            width: 100%;
+        }
+     
+        table th, table td {
+            padding: 6px 13px;
+            border: 1px solid #30363d;
+        }
+     
+        table th {
+            font-weight: 600;
+            background-color: #161b22;
+        }
+     
+        /* 인용구 스타일 */
+        blockquote {
+            padding: 0 1em;
+            color: #8b949e;
+            border-left: .25em solid #30363d;
+            margin: 0 0 16px 0;
+        }
+     
+        /* 수평선 스타일 */
+        hr {
+            height: .25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: #30363d;
+            border: 0;
+        }
+     
+        /* 이미지 스타일 */
+        img {
+            max-width: 100%;
+            box-sizing: border-box;
+            background-color: #0d1117;
+        }
+     
+        /* 코드 하이라이팅 */
+        .hljs {
+            color: #c9d1d9;
+            background: #0d1117;
+        }
+     
+        /* 선택 스타일 */
+        ::selection {
+            background-color: #1c4b6b;
+            color: #e6edf3;
+        }
+
+        #search-input {
+            padding: 8px;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            background: #0d1117;
+            color: #c9d1d9;
+            width: 200px;
+        }
+
+        .highlight {
+            background-color: #634d36;
+            color: #e6edf3;
+        }
+
+        /* 왼쪽 사이드바 스타일 */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: #161b22;
+            border-right: 1px solid #30363d;
+            padding: 20px;
+        }
+
+        /* 네비게이션 링크 스타일 */
+        .nav-link {
+            display: block;
+            padding: 8px 0;
+            color: #c9d1d9;
+            text-decoration: none;
+            border-bottom: 1px solid #21262d;
+        }
+        /* .nav-link {
+            display: block;
+            padding: 6px 8px;
+            color: #c9d1d9;
+            text-decoration: none;
+            border-radius: 3px;
+            margin: 2px 0;
+        } */
+
+        .nav-section {
+            margin-bottom: 10px;
+        }
+
+        .nav-section-title {
+            padding: 8px;
+            cursor: pointer;
+            color: #e6edf3;
+            font-weight: 500;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-section-title:hover {
+            background-color: #21262d;
+        }
+
+        .arrow {
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .nav-links {
+            padding-left: 25px;
+            display: none;  /* 기본적으로 숨김 */
+        }
+
+        .nav-link:hover {
+            background-color: #21262d;
+            color: #58a6ff;
+        }
+
+        .home-link {
+            display: block;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-bottom: 1px solid #30363d;
+        }
+     </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="../html/index.html" class="nav-link home-link">🏠 Home</a>
+        
+        <div class="nav-section">
+            <div class="nav-section-title" onclick="expandSection('projects')">
+                <span class="arrow">▶</span> 📝 Projects
+            </div>
+            <div id="projects" class="nav-links collapsed">
+                <a href="../html/project-a.html" class="nav-link">Project A</a>
+                <a href="../html/project-b.html" class="nav-link">Project B</a>
+                <a href="../html/project-c.html" class="nav-link">Project C</a>
+            </div>
+        </div>
+     
+        <div class="nav-section">
+            <div class="nav-section-title" onclick="expandSection('study')">
+                <span class="arrow">▶</span> 📚 Study Notes
+            </div>
+            <div id="study" class="nav-links collapsed">
+                <a href="../html/javascript.html" class="nav-link">JavaScript</a>
+                <a href="../html/python.html" class="nav-link">Python</a>
+                <a href="../html/pm2.html" class="nav-link">PM2</a>
+            </div>
+        </div>
+     
+        <div class="nav-section">
+            <div class="nav-section-title" onclick="expandSection('ideas')">
+                <span class="arrow">▶</span> 💡 Ideas
+            </div>
+            <div id="ideas" class="nav-links collapsed">
+                <a href="../html/ideas.html" class="nav-link">Ideas</a>
+            </div>
+        </div>
+     
+        <div class="nav-section">
+            <div class="nav-section-title" onclick="expandSection('settings')">
+                <span class="arrow">▶</span> ⚙️ Settings
+            </div>
+            <div id="settings" class="nav-links collapsed">
+                <a href="../html/vim-settings.html" class="nav-link">Vim Settings</a>
+            </div>
+        </div>
+     </div>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search...">
+    </div>
+
+    <h2 id="프로그래머를-위한-dbms">프로그래머를 위한 DBMS</h2>
+    <p><a
+    href="https://devjino.tistory.com/category/%EC%84%9C%EB%B2%84%20%EA%B0%9C%EB%B0%9C/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EB%A5%BC%20%EC%9C%84%ED%95%9C%20RDBMS">프로그래머를
+    위한 DBMS</a></p>
+    
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded", 
+            function() {
+                var input = document.getElementById("search-input");
+                input.addEventListener(
+                    "input",
+                    function() {
+                        var text = input.value;
+                        var content = document.body.innerHTML;
+                        var pattern = new RegExp(text, "g");
+                        document.body.innerHTML = content.replace(pattern, "<mark>" + text + "</mark>");
+                    }
+                );
+            }
+        );
+
+        function expandSection(id) {
+            const sections = document.querySelectorAll('.nav-links');
+            const arrows = document.querySelectorAll('.arrow');
+            sections.forEach((section, idx) => {
+                section.style.display = 'none';
+                arrows[idx].textContent = '▶';
+            });
+            const selectedSection = document.getElementById(id);
+            const selectedArrow = selectedSection.parentElement.querySelector('.arrow');
+            selectedSection.style.display = 'block';
+            selectedArrow.textContent = '▼';
+        }
+    </script>
+</body>
+</html>
