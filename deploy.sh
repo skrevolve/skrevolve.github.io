@@ -16,7 +16,7 @@ fi
 
 git rm -rf .
 
-git checkout $current_branch -- vimwiki/src/thml
+git checkout $current_branch -- vimwiki/src/html
 
 git mv vimwiki/src/html/* .
 
