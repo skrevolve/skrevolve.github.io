@@ -34,7 +34,7 @@ function! SaveAndConvertToHTML()
     let current_file = expand('%:p')
     let relative_path = substitute(current_file, $HOME.'/skrevolve.github.io/vimwiki/src/md/', '', '')
     let html_file = $HOME.'/skrevolve.github.io/vimwiki/src/html/'.substitute(relative_path, '\.md$', '.html', '')
-    let template_file = $HOME.'/skrevolve.github.io/vimwiki/src/html/template.html'
+    let template_file = $HOME.'/skrevolve.github.io/vimwiki/src/html/common/template.html'
     
     silent !mkdir -p "$(dirname '".html_file."')"
     
