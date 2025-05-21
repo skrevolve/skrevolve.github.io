@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>project-a</title>
+    <title>vim-settings</title>
     <style>
         /* GitHub Dark Theme 스타일 */
         body {
@@ -230,16 +230,16 @@
 </head>
 <body>
     <div class="sidebar">
-        <a href="../html/index.html" class="nav-link home-link">🏠 Home</a>
+        <a href="index.html" class="nav-link home-link">🏠 Home</a>
         
         <div class="nav-section">
             <div class="nav-section-title" onclick="expandSection('projects')">
                 <span class="arrow">▶</span> 📝 Projects
             </div>
             <div id="projects" class="nav-links collapsed">
-                <a href="../html/project-a.html" class="nav-link">Project A</a>
-                <a href="../html/project-b.html" class="nav-link">Project B</a>
-                <a href="../html/project-c.html" class="nav-link">Project C</a>
+                <a href="project-a.html" class="nav-link">Project A</a>
+                <a href="project-b.html" class="nav-link">Project B</a>
+                <a href="project-c.html" class="nav-link">Project C</a>
             </div>
         </div>
      
@@ -248,9 +248,9 @@
                 <span class="arrow">▶</span> 📚 Study Notes
             </div>
             <div id="study" class="nav-links collapsed">
-                <a href="../html/javascript.html" class="nav-link">JavaScript</a>
-                <a href="../html/python.html" class="nav-link">Python</a>
-                <a href="../html/pm2.html" class="nav-link">PM2</a>
+                <a href="javascript.html" class="nav-link">JavaScript</a>
+                <a href="python.html" class="nav-link">Python</a>
+                <a href="pm2.html" class="nav-link">PM2</a>
             </div>
         </div>
      
@@ -259,7 +259,7 @@
                 <span class="arrow">▶</span> 💡 Ideas
             </div>
             <div id="ideas" class="nav-links collapsed">
-                <a href="../html/ideas.html" class="nav-link">Ideas</a>
+                <a href="ideas.html" class="nav-link">Ideas</a>
             </div>
         </div>
      
@@ -277,7 +277,28 @@
         <input type="text" id="search-input" placeholder="Search...">
     </div>
 
-    <h1 id="project-a">Project A</h1>
+    <h1 id="vim-settings">vim-settings</h1>
+    <p>https://github.com/junegunn/vim-plug</p>
+    <h2 id="install-vimlink">install vimlink</h2>
+    <div class="sourceCode" id="cb1"><pre
+    class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fLo</span> ~/.vim/autoload/plug.vim <span class="at">--create-dirs</span> <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">vim</span> ~/.vimrc <span class="er">(</span><span class="ex">.vimrc</span> 파일 참조<span class="kw">)</span> <span class="co"># vim 실행후 명령모드에서 :PlugInstall 입력</span></span></code></pre></div>
+    <h2 id="install-pandoc">install pandoc</h2>
+    <div class="sourceCode" id="cb2"><pre
+    class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pandoc 설치</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install pandoc   <span class="co"># 우분투</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install pandoc           <span class="co"># 맥</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 변환</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> pm2.md <span class="at">-o</span> pm2.html</span></code></pre></div>
+    <h2 id="command">command</h2>
+    <div class="sourceCode" id="cb3"><pre
+    class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">index</span> 이동 : command 에서 ,ww</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">링크</span> 이동: 커서 위치에서 enter</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">전체</span> html 파일변환: ./md_to_html.sh</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">md</span> 매 저장시 html변환</span></code></pre></div>
     
     <script>
         document.addEventListener(
